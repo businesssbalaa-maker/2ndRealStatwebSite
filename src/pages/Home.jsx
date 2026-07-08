@@ -104,7 +104,7 @@ console.log(res1)
   }, []); // ✅ empty array ensures it runs only once
 
   const copyLink = () => {
-    const link = `http://realstateinvest.in/register?invitation_code=${UserData.referralCode}`;
+    const link = `http://realstateinvest.xyz/register?invitation_code=${UserData.referralCode}`;
     navigator.clipboard.writeText(link).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -244,7 +244,7 @@ console.log(res1)
               <div>
                 <p className="label">Promotional Links</p>
                 <p className="link-text">
-                  http://realstateinvest.in/register?invitation_code=
+                  http://realstateinvest.xyz/register?invitation_code=
                   {UserData.referralCode}
                 </p>
               </div>
