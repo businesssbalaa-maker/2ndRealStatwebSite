@@ -14,7 +14,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
 import Cookies from "js-cookie";
 import pako from "pako";
-
+import UpiQrCode from "./UpiQrCode";
 
 const QRCode = async () => {
   const res = await QRrandom();
@@ -369,20 +369,14 @@ const seconds = timer % 60;
           </p>
 
           <div className="qr-box">
-            {isLoading && !qrCodeUrl ? (
+            {upiId ? (
               <div className="qr-loading">
                 <Loader2 className="spin" />
                 <p>Loading QR...</p>
               </div>
             ) : (
-              qrCodeUrl && (
-                <img
-                  src={qrCodeUrl}
-                  alt="QR Code"
-                  onError={(e) => {
-                    e.target.src =
-                      "https://placehold.co/160x160/F7F7F7/333333?text=QR+Error";
-                  }}
+              upiId && (
+                <UpiQrCode
                 />
               )
             )}
