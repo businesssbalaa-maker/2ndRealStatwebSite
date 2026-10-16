@@ -1,4 +1,4 @@
-```jsx
+
 import React, { useEffect, useState } from "react";
 import QRCode from "qrcode";
 
@@ -57,4 +57,4 @@ const UpiQrCode = ({ upiId, size = 240 }) => {
 };
 
 export default UpiQrCode;
-```
+
