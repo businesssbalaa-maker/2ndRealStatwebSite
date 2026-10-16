@@ -376,7 +376,7 @@ const seconds = timer % 60;
               </div>
             ) : (
               upiId && (
-                <UpiQrCode
+              <UpiQrCode upiId={upiId}
                 />
               )
             )}
