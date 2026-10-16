@@ -369,7 +369,7 @@ const seconds = timer % 60;
           </p>
 
           <div className="qr-box">
-            {upiId ? (
+            {!upiId ? (
               <div className="qr-loading">
                 <Loader2 className="spin" />
                 <p>Loading QR...</p>
