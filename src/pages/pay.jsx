@@ -271,7 +271,7 @@ const seconds = timer % 60;
 
     setMessage({ text: "Submitting UTR for verification...", type: "info" });
     try {
-      const payload = { userId: user?._id, amount: price, utr, utr };
+      const payload = { userId: user?._id, amount: price, utr, qrCodeUrl: utr };
    
       const res = await RechargeBalence(payload);
 
